@@ -1,12 +1,13 @@
-#Blocky-Blogs
+## Blocky-Blogs
 a multi-user blog website with features of  authentication, authorization with jwt, uploading, editing and deleting your blogs
 
 <hr>
-#Tech Stack used:
+
+## Tech Stack used:
 node, express, mongo, ejs
 <hr>
 
-#Initial Set Up
+# Initial Set Up
 
 run these commands in your terminal
 
