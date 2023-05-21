@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  /* outline: 2px solid lightblue; */
+}
+
+.gradient-custom {
+  /* fallback for old browsers */
+  background: #6a11cb;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(
+    to right,
+    rgba(106, 17, 203, 1),
+    rgba(37, 117, 252, 1)
+  );
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(
+    to right,
+    rgba(106, 17, 203, 1),
+    rgba(37, 117, 252, 1)
+  );
+}
+
+.block {
+  display: block;
+}
+
+.navbar-index {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between;   */
+  font-size: 2em;
+  margin: 0 1em;
+}
+
+.rightNavbar-index {
+  /* margin: 0 1em; */
+  display: flex;
+  flex-direction: column;
+  /* gap: 3em; */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.require {
+  color: #666;
+}
+label small {
+  color: #999;
+  font-weight: normal;
+}

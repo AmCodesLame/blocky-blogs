@@ -1,0 +1,102 @@
+<header class="tm-header" id="tm-header">
+  <div class="tm-header-wrapper">
+    <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="tm-site-header">
+      <div class="mb-3 mx-auto tm-site-logo">
+        <i class="fas fa-wrench fa-2x"></i>
+      </div>
+      <h1 class="text-center">Blocky Blogs</h1>
+    </div>
+    <div class="tm-site-header">
+      <h3>Hellow There! <%=user.toUpperCase() %>!</h3>
+    </div>
+    <nav class="tm-nav" id="tm-nav">
+      <ul>
+        <li class="tm-nav-item active" id="blogHomeNav">
+          <a href="/" class="tm-nav-link">
+            <i class="fas fa-home"></i>
+            Blog Home
+          </a>
+        </li>
+        <li class="tm-nav-item" id="newPostNav">
+          <a href="/create" class="tm-nav-link">
+            <i class="fas fa-edit"></i>
+            Create New Post
+          </a>
+        </li>
+        <li class="tm-nav-item" id="myPostNav">
+          <a href="/user" class="tm-nav-link">
+            <i class="fas fa-pen"></i>
+            My Posts
+          </a>
+        </li>
+
+        <li class="tm-nav-item" id="logOutNav">
+          <a id="logoutBtn" class="tm-nav-link">
+            <i class="far fa-arrow-alt-circle-left"></i>
+            Log Out
+          </a>
+        </li>
+      </ul>
+    </nav>
+      <nav class="tm-nav" id="tm-nav">
+        <ul>
+          <li class="tm-nav-item" id="blogHomeNav">
+            <a href="/" class="tm-nav-link ">
+              <i class="fas fa-code"></i>
+              GitHub Code
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- <a href="https://twitter.com" class="tm-social-link">
+        <i class="fab fa-twitter tm-social-icon"></i>
+      </a>
+      <a href="https://instagram.com" class="tm-social-link">
+        <i class="fab fa-instagram tm-social-icon"></i>
+      </a>
+      <a href="https://linkedin.com" class="tm-social-link">
+        <i class="fab fa-linkedin tm-social-icon"></i>
+      </a> -->
+    </nav>
+    <p class="tm-mb-80 pr-5 text-white">
+      this is a template site from
+      <a href="https://templatemo.com/tm-553-xtra-blog" target="_blank"
+        >TemplateMo</a
+      >
+    </p>
+  </div>
+</header>
+
+<script>
+  const toggle = document.querySelector(".tm-nav-item");
+  const blogHome = document.querySelector("#blogHomeNav");
+  const newPost = document.querySelector("#newPostNav");
+  const myPostNav = document.querySelector("#myPostNav");
+
+  const state = "<%- JSON.stringify(page) %>";
+  if (state == "0") {
+    blogHome.classList.add("active");
+    newPost.classList.remove("active");
+    myPostNav.classList.remove("active");
+  } else if (state == "1") {
+    blogHome.classList.remove("active");
+    newPost.classList.add("active");
+    myPostNav.classList.remove("active");
+  } else if (state == "2") {
+    blogHome.classList.remove("active");
+    newPost.classList.remove("active");
+    myPostNav.classList.add("active");
+  } else {
+    blogHome.classList.remove("active");
+    newPost.classList.remove("active");
+    myPostNav.classList.remove("active");
+  }
+  const logo = document.querySelector(".tm-header-wrapper")
+  logo.addEventListener("click", ()=>{
+    window.location.assign("/")
+  })
+</script>
