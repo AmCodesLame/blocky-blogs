@@ -25,7 +25,7 @@ app.set("view engine", "ejs");
 //connecting to mongoose
 async function mongoInit() {
   mongoose.connect(
-    `mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONGO_PASSWORD}@firstcluster.fgxgzv3.mongodb.net/?retryWrites=true&w=majority`
+    process.env.MONGO_URI
   );
   console.log("[MONGO]: connected to DB");
 }
